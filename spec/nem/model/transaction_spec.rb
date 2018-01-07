@@ -34,6 +34,7 @@ describe Nem::Model::TransferTransaction do
 
     it { expect(subject).to be_a described_class }
     it { expect(subject.type).to eq 0x0101 }
-    it { expect(subject.version?(1)).to be true  }
+    it { expect(subject.version?(1)).to be true }
+    it { expect(subject.network?(:testnet)).to be true }
   end
 end
